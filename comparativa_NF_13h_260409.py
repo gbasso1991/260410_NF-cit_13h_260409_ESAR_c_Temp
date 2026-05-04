@@ -177,7 +177,7 @@ ecSAR_13_47=[]
 rates_13_57=[]
 ecSAR_13_57=[]
 
-fig11, (ax,ax2,ax3) =plt.subplots(3,1,figsize=(12,8),constrained_layout=True,sharey=True,sharex=True)
+fig11, (ax,ax2,ax3) =plt.subplots(3,1,figsize=(14,8),constrained_layout=True,sharey=True,sharex=True)
 
 for i,r in enumerate(res_13):
     if ('100dA' in r.directorio):
@@ -233,7 +233,7 @@ ax3.text(0.98,0.1,f'WR = {rate_13_57:.1uS} °C/s\necSAR = {ecSAR_13_57:.3uS} W/g
         transform=ax3.transAxes)    
 for a in ax,ax2,ax3:
     a.grid()
-    a.legend(loc='best')
+    a.legend(loc='best',frameon=True,shadow=True)
     a.set_ylabel('T (ºC)')
     
 ax.set_xlim(0,)
