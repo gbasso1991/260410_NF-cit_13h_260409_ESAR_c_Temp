@@ -508,7 +508,7 @@ ax3.set_xticks([-57,-45,-38,0,38,45,57])
 for a in ax,ax2,ax3:
     a.grid()
     a.set_xlabel('H (kA/m)')
-    a.legend(title='H$_0$ (kA/m)',loc='upper left',ncol=1)
+    a.legend(title='H$_0$ (kA/m)',loc='upper left',ncol=1,frameon=True,shadow=True)
 #plt.suptitle('Comparativa ciclos promedio NF@cit\n300 kHz')
 plt.savefig('0_comparativa_ciclos_internos_NF@13_260409_300kHz_57_47_38.png',dpi=300)
 
