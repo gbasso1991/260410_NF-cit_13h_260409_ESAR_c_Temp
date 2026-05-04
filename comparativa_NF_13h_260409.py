@@ -489,18 +489,18 @@ fig40, ax2 =plt.subplots(figsize=(7,6),constrained_layout=True,sharey=True,share
 for i,e in enumerate(ciclos_13):
     if '100dA' in e:
         _,_,_, H_13,M_13,_ = lector_ciclos(ciclos_13[i])
-        ax2.plot(H_13/1000,M_13,'-',c='C0',label=f'38 {i}',alpha=0.8)
+        ax2.plot(H_13/1000,M_13,'-',c='C0',label=f'38' if i==0 else '',alpha=0.8)
  
     if '125dA' in e:
         _,_,_, H_13,M_13,_ = lector_ciclos(ciclos_13[i])
-        ax2.plot(H_13/1000,M_13,'-',c='C1',label=f'47 {i}',alpha=0.8)
+        ax2.plot(H_13/1000,M_13,'-',c='C1',label=f'47' if i==4 else '',alpha=0.8)
 
     if '152dA' in e:
         _,_,_, H_13,M_13,_ = lector_ciclos(ciclos_13[i])
-        ax2.plot(H_13/1000,M_13,'-',c='C2',label=f'57 {i}',alpha=0.8)
+        ax2.plot(H_13/1000,M_13,'-',c='C2',label=f'57' if i==7 else '',alpha=0.8)
         
 ax.set_ylabel('M (A/m)')
-ax2.set_title(f'13 hs   C= g/L',loc='left')
+ax2.set_title(f'13 hs   C = 32.8 g/L',loc='left')
 
 ax.set_xticks([-57,-47,-38,0,38,47,57])
 ax2.set_xticks([-57,-47,-38,0,38,47,57])
@@ -508,8 +508,10 @@ ax3.set_xticks([-57,-45,-38,0,38,45,57])
 for a in ax,ax2,ax3:
     a.grid()
     a.set_xlabel('H (kA/m)')
-    a.legend(title='H$_0$ (kA/m)',loc='upper left',ncol=3)
-plt.suptitle('Comparativa ciclos promedio NF@cit\n300 kHz')
+    a.legend(title='H$_0$ (kA/m)',loc='upper left',ncol=1)
+#plt.suptitle('Comparativa ciclos promedio NF@cit\n300 kHz')
 plt.savefig('0_comparativa_ciclos_internos_NF@13_260409_300kHz_57_47_38.png',dpi=300)
 
 
+
+# %%
