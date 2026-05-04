@@ -123,7 +123,7 @@ resultados_13 = glob("**/**/**/*resultados.txt")
 
 ciclos_13.sort()
 resultados_13.sort()
-conc_13 = 24 #g/L
+conc_13 = 32.8 #g/L
 
 for p in ciclos_13:
     print('  ',p)
@@ -227,7 +227,7 @@ ax2.text(0.98,0.1,f'WR = {rate_13_47:.1uS} °C/s\necSAR = {ecSAR_13_47:.2uS} W/g
         ha='right',va='bottom',
         transform=ax2.transAxes)
 
-ax3.text(0.98,0.1,f'WR = {rate_13_57:.1uS} °C/s\necSAR = {ecSAR_13_57:.2uS} W/g',
+ax3.text(0.98,0.1,f'WR = {rate_13_57:.1uS} °C/s\necSAR = {ecSAR_13_57:.3uS} W/g',
         bbox=dict(boxstyle="round", fc='C3',alpha=0.6,lw=1),
         ha='right',va='bottom',
         transform=ax3.transAxes)    
